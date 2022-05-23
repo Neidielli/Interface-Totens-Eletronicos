@@ -1,0 +1,47 @@
+/******* FORMATAÇÃO DAS TAG's ******/
+header {
+    background: #5dcad1;
+    height: 150px;
+}
+footer {
+    background: #5dcad1;
+    height: 150px;
+}
+input {
+    height: 30px;
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+/****** FORMATAÇÃO DAS CLASS *****/
+.area-cabeçalho {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.item-cabeçalho {
+    width: 100px;
+    height: 70px;
+    /*border: 1px solid red;*/
+    text-align: center;
+
+}
+.rodape {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.item-rodape {
+    width: 100px;
+    height: 50px;
+    /*border: 1px solid red;*/
+}
