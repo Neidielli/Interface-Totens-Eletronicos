@@ -1,7 +1,11 @@
 /******* FORMATAÇÃO DAS TAG's ******/
 header {
     background: #5dcad1;
-    height: 150px;
+    height: 200px;
+}
+menu{
+    background: #1C2143;
+    height: 100px;
 }
 footer {
     background: #5dcad1;
@@ -29,10 +33,27 @@ input {
     width: 100px;
     height: 70px;
     /*border: 1px solid red;*/
-     /*border: 1px solid red;*/
+    border: 1px solid red;
     text-align: center;
 
 }
+.area-menu{
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.item-menu{
+    width: 200px;
+    height: 50px;
+    border: 1px solid red;
+    text-align: center;  
+}
+
 .rodape {
     height: 150px;
     display: flex;
