@@ -1,7 +1,10 @@
 /******* FORMATAÇÃO DAS TAG's ******/
 header {
     background: #5dcad1;
-    height: 100px;
+    height: 125px;
+}
+main {
+    background: #e6ecec;
 }
 footer {
     background: #5dcad1;
@@ -44,3 +47,5 @@ footer {
     height: 50px;
    /* border: 1px solid red;*/
 }
+
+/*** FORMATAÇÃO DAS ID's ***/
