@@ -48,4 +48,10 @@ footer {
    /* border: 1px solid red;*/
 }
 
+
 /*** FORMATAÇÃO DAS ID's ***/
+
+#cartoes  a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+    color: black;
+}
