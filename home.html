@@ -24,19 +24,22 @@
     <header> <!-- INICIO DA HEADER -->
 
         <div class="area-cabeçalho">
-            <div class="logo item-cabeçalho">
+            <div class="item-cabeçalho logo">
                 <a href="home.html"><img src="imagens/logo.png" height="70" width="90"></a>
             </div>
+
+
             <div class="input-group item-cabeçalho">
                 <input class="form-control" type="text" autocomplete="off" placeholder="Encontre seu produto">
                 <div class="input-group-append">
                     <button type="button" class="btn btn-primary"><img src="imagens/lupa-icon.png" height="20" width="20"></button>
                 </div>
             </div>
-            <div class="suporte item-cabeçalho">
+
+            <div class="item-cabeçalho menu-icones">
                 <a href="suporte.html"><img src="imagens/suporte-icon.png" height="30" width="40"></a>
             </div>
-            <div class="carrinho item-cabeçalho">
+            <div class="item-cabeçalho menu-icones">
                 <a href="carrinho.html"><img src="imagens/carrinho-icon.png" height="30" width="40"><span class="badge badge-info">0</span></a>
             </div>
         </div>
@@ -48,23 +51,19 @@
     <main> <!-- INICIO DA MAIN-->
     
         <div id="cartoes">	
-            <a href="hardware.html">
             <div class="card item-cartoes">
-                <div class="card-body">
+                <div class="card-body" onclick="window.location.href='hardware.html';">
                     <h4 class="card-title text-center">HARDWARE</h4>
                     <img src="imagens/icon-hardware.png">
                 </div>
             </div>
-            </a>
     
-            <a href="cadeiras.html">
-            <div class="card item-cartoes" href="cadeiras.html">
-                <div class="card-body">
+            <div class="card item-cartoes">
+                <div class="card-body" onclick="window.location.href='cadeiras.html';">
                     <h4 class="card-title text-center">CADEIRAS</h4>
                     <img src="imagens/icon-cadeiras.png">
                 </div>
             </div>
-            </a>
     
             <a href="periféricos.html">
             <div class="card item-cartoes">

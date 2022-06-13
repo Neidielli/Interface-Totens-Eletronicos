@@ -1,0 +1,14 @@
+#suporte-main {
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    background: #e6ecec;
+}
+#suporte-main h2{
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+#suporte-main button{
+   margin: 50px 600px 50px 600px;
+}

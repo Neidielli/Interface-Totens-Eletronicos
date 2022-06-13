@@ -24,15 +24,21 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
     align-items: center;
-
 }
 .item-cabeçalho {
-    width: 350px;
+    width: 900px;
     height: 30px;
-    /*border: 1px solid red;*/
     text-align: center;
+    margin: 20px;
+}
+.item-cabeçalho.logo{
+    width: 200px;
+    justify-content: start;
+}
+.item-cabeçalho.menu-icones{
+    width: 100px;
 }
 .rodape {
     height: 150px;
