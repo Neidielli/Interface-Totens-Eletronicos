@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <!-- ESTILO CUSTOMIZADO  HOME -->
     <link rel="stylesheet" type="text/css" href="css/estilo_home.css">
+    <!-- ESTILO CUSTOMIZADO  HARDWARE -->
+    <link rel="stylesheet" type="text/css" href="css/estilo_hardware.css">
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>
@@ -47,6 +49,49 @@
  
     <main> <!-- INICIO DA MAIN-->
     
+        <section id="prodetalhes" class="section-p1"> 
+
+            <div class="prodetalhes-item"> <!-- PRODUTO -->
+                <img src="imagens/Cadeiras/Cadeira Gamer Husky Gaming Snow.png" width="100%" id="cadeiraHusky"  alt=""> <!-- GRANDE -->
+
+                <div class="img-pequenas-grupo">
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Cadeiras/Cadeira Gamer Husky Gaming Snow.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Cadeiras/Cadeira de Escritório Husky Office 700.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Cadeiras/Cadeira Gamer Corsair T2 Road Warrior.png" width="100%" class="small-img" alt="">
+                    </div>
+                </div>
+
+            </div> <!-- FIM PRODUTO -->
+
+            <div class="descriçao">
+                <h6>Home / Cadeira </h6>
+                <h4>Cadeira Gamer Husky Gaming Snow</h4>
+                <h2>R$ 629,90</h2>
+                <select>
+                    <option>Selecione a cor</option>
+                    <option>Rosa</option>
+                    <option>Azul</option>
+                    <option>Cinza</option>
+                    <option>Preto</option>
+                </select>
+
+                <input type="number" value="1">
+                <button class="btn btn-primary">Adicionar ao carrinho</button>
+
+                <h3>Descrição</h3>
+                <span>A Cadeira Gamer Husky Gaming Snow proporciona alto conforto e qualidade para as melhores horas do seu dia! Tudo isso aliado a um ótimo custo benefício. 
+
+                    O Melhor Para Seu Game
+                    
+                    Os games do momento ficam ainda mais empolgantes ao serem jogados em uma Cadeira Gamer Husky Gaming Snow, pois além do design moderno e robusto, a cadeira proporciona ótima performance nas partidas devido a sensação de conforto que é convertida em foco e concentração, tudo que um gamer de verdade precisa para ser o melhor! </span>
+
+            </div>
+        </section>
 
     </main> <!-- FIM MAIN -->
 
@@ -94,6 +139,22 @@
             </div>
         </div>
     </footer> <!-- FIM FOOTER-->
+
+    <script>
+        var cadeiraHusky = document.getElementById("cadeiraHusky");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function(){
+            cadeiraHusky.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function(){
+            cadeiraHusky.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function(){
+            cadeiraHusky.src = smallimg[2].src;
+        }
+
+    </script>
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>
