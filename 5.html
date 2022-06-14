@@ -13,7 +13,7 @@
     <!-- ESTILO CUSTOMIZADO -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <!-- ESTILO CUSTOMIZADO  HOME -->
-    <link rel="stylesheet" type="text/css" href="css/estilo_home.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_hardware.css">
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>
@@ -46,7 +46,46 @@
 
  
     <main> <!-- INICIO DA MAIN-->
-    
+        <section id="prodetalhes" class="section-p1"> 
+
+            <div class="prodetalhes-item"> <!-- PRODUTO -->
+                <img src="imagens/Hardware/KCF1.png" width="100%" id="cadeiraHusky"  alt=""> <!-- GRANDE -->
+
+                <div class="img-pequenas-grupo">
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Hardware/KCF1.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Hardware/KCF2.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Hardware/KCF3.png" width="100%" class="small-img" alt="">
+                    </div>
+                </div>
+
+            </div> <!-- FIM PRODUTO -->
+
+            <div class="descriçao">
+                <h6>Home / Hardware </h6>
+                <h4>Kit Cooler FAN Rise</h4>
+                <h2>R$ 150,30</h2>
+
+                <input type="number" value="1">
+                <button class="btn btn-primary">Adicionar ao carrinho</button>
+
+                <h3>Descrição</h3>
+                <span>
+                    <p> - RM-AU-02-RGB</p>
+                    <p>- Dimensões do Fan: (3x) 120mm x 120mm x 25mm</p>
+                    <p>- RGB com controle remoto / 12v motherboard</p>
+                    <p> - Fluxo de ar do Fan: 50 CFM</p>
+                    <p>- Velocidade do fan: 1650 RPM</p>
+                    <p>- Nivel de Ruído 25 DBA (MAX)</p>
+                    <p>- Tipo de rolamento: Rolamento de ﬂuído</p>
+                    <p>- Controle de velocidade do fan e troca de led</p> 
+                </span>
+            </div>
+        </section>
 
     </main> <!-- FIM MAIN -->
 
@@ -94,6 +133,22 @@
             </div>
         </div>
     </footer> <!-- FIM FOOTER-->
+
+    <script>
+        var cadeiraHusky = document.getElementById("cadeiraHusky");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function(){
+            cadeiraHusky.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function(){
+            cadeiraHusky.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function(){
+            cadeiraHusky.src = smallimg[2].src;
+        }
+
+    </script>
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>

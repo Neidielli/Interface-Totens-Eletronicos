@@ -9,6 +9,10 @@
 	box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.5); 
 }
 
+.item-cartoes:hover {
+	box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.8); 
+}
+
 /*** FORMATAÇÃO DAS ID's ***/
 #cartoes {
 	height: 325px;

@@ -13,7 +13,7 @@
     <!-- ESTILO CUSTOMIZADO -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <!-- ESTILO CUSTOMIZADO  HOME -->
-    <link rel="stylesheet" type="text/css" href="css/estilo_home.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_cadeiras.css">
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>
@@ -47,7 +47,53 @@
 
  
     <main> <!-- INICIO DA MAIN-->
-    
+        <section id="prodetalhes" class="section-p1"> 
+
+            <div class="prodetalhes-item"> <!-- PRODUTO -->
+                <img src="imagens/Cadeiras/CEH1.png" width="100%" id="cadeiraHusky"  alt="">
+
+                <div class="img-pequenas-grupo">
+                    <div class="img-pequenas-col">
+                        <img src="imagens/Cadeiras/CEH1.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col">
+                        <img src="imagens/Cadeiras/CEH2.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col">
+                        <img src="imagens/Cadeiras/CEH3.png" width="100%" class="small-img" alt="">
+                    </div>
+                </div>
+
+            </div> <!-- FIM PRODUTO -->
+
+            <div class="descriçao">
+                <h6>Home / Cadeira </h6>
+                <h4>Cadeira de Escritório Husky Office 700</h4>
+                <h2>R$ 1.500,99</h2>
+                <select>
+                    <option>Selecione a cor</option>
+                    <option>Preto</option>
+                </select>
+
+                <input type="number" value="1">
+                <button class="btn btn-primary">Adicionar ao carrinho</button>
+
+                <h3>Descrição</h3>
+                <span>
+
+                 <p>A Cadeira Office Husky Sit 350, é perfeita para seu escritório ou home-office. Além de possuir muito estilo para o seu ambiente, você ficará muito confortável e na postura correta, o que facilita a circulação e evita dores musculares. A Cadeira Office Husky, Sit 350, é parte da linha de Cadeiras Office Sit da Husky disponível nas cores: black, light grey e dark grey, especialmente desenvolvida para suprir as necessidades de quem procura uma cadeira de qualidade por um ótimo custo benefício.</p> 
+                 
+                 <p>Com o Apoio para cabeça mantenha-se em posição confortável, sem cansar o pescoço. O encosto é feito em PA, com fibra de vidro, resistente e durável e a reclinação vai de 90º até 120º. O Assento estofado, feito em espuma com densidade de 55 kg/m3 e suporta peso de até 120 kg. Apoio de braços com regulagem de altura, em material PP com superfície em poliuretano (PU), garantem sustentação adequada e confortável para os braços.</p>
+                       
+                 <p>Possui ajustes de altura e de reclinação, além de um pistão a gás classe 3. Possui também o mecanismo Tilt & Lock, que permite travar a cadeira em três ângulos de inclinação diferentes e ajustar a tensão do balanço e inclinação.</p>
+                      
+                 <p>Em nylon com fibra de vidro, resistente e durável. Rodízio feito em nylon, com  60 mm, permitindo melhor movimentação e evitando riscos no chão e a base em nylon, possui 680 mm de diâmetro. Mais espaço, mais conforto!</p>
+            
+                </span>
+                    
+                
+            </div>
+        </section>
 
     </main> <!-- FIM MAIN -->
 
@@ -95,6 +141,22 @@
             </div>
         </div>
     </footer> <!-- FIM FOOTER-->
+
+    <script>
+        var cadeiraHusky = document.getElementById("cadeiraHusky");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function(){
+            cadeiraHusky.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function(){
+            cadeiraHusky.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function(){
+            cadeiraHusky.src = smallimg[2].src;
+        }
+
+    </script>
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>
