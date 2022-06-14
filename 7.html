@@ -13,7 +13,7 @@
     <!-- ESTILO CUSTOMIZADO -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <!-- ESTILO CUSTOMIZADO  HOME -->
-    <link rel="stylesheet" type="text/css" href="css/estilo_home.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_tv.css">
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>
@@ -46,7 +46,40 @@
 
  
     <main> <!-- INICIO DA MAIN-->
-    
+        <section id="prodetalhes" class="section-p1"> 
+
+            <div class="prodetalhes-item"> <!-- PRODUTO -->
+                <img src="imagens/TV/smart1.png" width="100%" id="cadeiraHusky"  alt=""> <!-- GRANDE -->
+
+                <div class="img-pequenas-grupo">
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/TV/smart1.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/TV/smart2.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/TV/smart3.png" width="100%" class="small-img" alt="">
+                    </div>
+                </div>
+
+            </div> <!-- FIM PRODUTO -->
+
+            <div class="descriçao">
+                <h6>Home / Tv </h6>
+                <h4>Smart TV LED 43´ Full HD Samsung</h4>
+                <h2>R$ 2.299,00</h2>
+                
+                <input type="number" value="1">
+                <button class="btn btn-primary">Adicionar ao carrinho</button>
+
+                <h3>Descrição</h3>
+                <span>
+                  <p>Smart TV LED 43´ Full HD Samsung. Acesse suas músicas, filmes, notícias, jogos e redes sociais tudo em uma única tela, com o sistema operacional TIZEN.</p>
+
+                </span>
+            </div>
+        </section>
 
     </main> <!-- FIM MAIN -->
 
@@ -94,6 +127,22 @@
             </div>
         </div>
     </footer> <!-- FIM FOOTER-->
+
+    <script>
+        var cadeiraHusky = document.getElementById("cadeiraHusky");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function(){
+            cadeiraHusky.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function(){
+            cadeiraHusky.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function(){
+            cadeiraHusky.src = smallimg[2].src;
+        }
+
+    </script>
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>

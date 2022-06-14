@@ -13,7 +13,7 @@
     <!-- ESTILO CUSTOMIZADO -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <!-- ESTILO CUSTOMIZADO  HOME -->
-    <link rel="stylesheet" type="text/css" href="css/estilo_home.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_tv.css">
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>
@@ -46,7 +46,45 @@
 
  
     <main> <!-- INICIO DA MAIN-->
-    
+
+        <section id="prodetalhes" class="section-p1"> 
+
+            <div class="prodetalhes-item"> <!-- PRODUTO -->
+                <img src="imagens/TV/STV1.png" width="100%" id="cadeiraHusky"  alt=""> <!-- GRANDE -->
+
+                <div class="img-pequenas-grupo">
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/TV/STV1.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/TV/STV2.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/TV/STV3.png" width="100%" class="small-img" alt="">
+                    </div>
+                </div>
+
+            </div> <!-- FIM PRODUTO -->
+
+            <div class="descriçao">
+                <h6>Home / Tv's </h6>
+                <h4>Smart TV Samsung 50 QLED 4K</h4>
+                <h2>R$ 3.039,05</h2>
+                
+                <input type="number" value="1">
+                <button class="btn btn-primary">Adicionar ao carrinho</button>
+
+                <h3>Descrição</h3>
+                <span>
+                  <p>Desfrute o máximo da qualidade de imagem em 4K, com 1 bilhão de cores vibrantes por muito mais tempo.</p>
+                  <p>O som acompanha os objetos da cena. Desfrute de uma experiência sonora cinematográfica com alto-falantes espalhados pela tela que acompanham o movimento das cenas, como se você estivesse no meio da ação.</p>
+                  <p>Experimente uma imersão incrível nos seus programas favoritos com uma TV superfina de apenas 2,5cm de espessura e sem bordas aparentes.</p>
+                  <p>Seus filmes, programas e jogos em um só lugar: Com o novo Smart Hub você gasta menos tempo pesquisando e mais tempo assistindo a programas que você gosta graças à experiência otimizada de pesquisa, que sugere conteúdos com base em como você usa sua TV.</p>
+                  <p>A proporção e o controle que você precisa para o seu jogo. Tenha a melhor visualização do seu game com opções de formato de tela de 21:9 ou 32:9, além de um menu intuitivo para você consultar o input lag, FPS, HDR e outras informações importantes com rapidez e realizar ajustes que fazem a diferença na partida.</p>
+                </span>
+            </div>
+        </section>
+
 
     </main> <!-- FIM MAIN -->
 
@@ -94,6 +132,22 @@
             </div>
         </div>
     </footer> <!-- FIM FOOTER-->
+
+    <script>
+        var cadeiraHusky = document.getElementById("cadeiraHusky");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function(){
+            cadeiraHusky.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function(){
+            cadeiraHusky.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function(){
+            cadeiraHusky.src = smallimg[2].src;
+        }
+
+    </script>
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>

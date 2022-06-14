@@ -13,7 +13,7 @@
     <!-- ESTILO CUSTOMIZADO -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <!-- ESTILO CUSTOMIZADO  HOME -->
-    <link rel="stylesheet" type="text/css" href="css/estilo_home.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_computadores.css">
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>
@@ -46,7 +46,39 @@
 
  
     <main> <!-- INICIO DA MAIN-->
-    
+        <section id="prodetalhes" class="section-p1"> 
+
+            <div class="prodetalhes-item"> <!-- PRODUTO -->
+                <img src="imagens/Computadores/NTC1.png" width="100%" id="cadeiraHusky"  alt=""> <!-- GRANDE -->
+
+                <div class="img-pequenas-grupo">
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Computadores/NTC1.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Computadores/NTC2.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Computadores/NTC3.png" width="100%" class="small-img" alt="">
+                    </div>
+                </div>
+
+            </div> <!-- FIM PRODUTO -->
+
+            <div class="descriçao">
+                <h6>Home / Computadores </h6>
+                <h4>Computador NTC Mini-ITX Intel Celeron J4005</h4>
+                <h2>R$ 1.159,90</h2>
+
+                <input type="number" value="1">
+                <button class="btn btn-primary">Adicionar ao carrinho</button>
+
+                <h3>Descrição</h3>
+                <span>
+                    <p>Computador NTC Mini-ITX Intel Celeron J4005 O Mini Computador NTC 1202 W10PRO vem equipado com processador Intel Celeron J4005 com 2 Nucleos de 2.0Ghz a 2.70Ghz no modo Turbo, Placa Mãe Gigabyte GA-IMB4005TN-M, 4GB de Memoria RAM DDR4 2400 Mhz Soddim (1x4GB), SSD de 120 GB Sata 3 2.5" e Sistema Operacional Windows 10 PRO.</p>
+                </span>
+            </div>
+        </section>
 
     </main> <!-- FIM MAIN -->
 
@@ -94,6 +126,22 @@
             </div>
         </div>
     </footer> <!-- FIM FOOTER-->
+
+    <script>
+        var cadeiraHusky = document.getElementById("cadeiraHusky");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function(){
+            cadeiraHusky.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function(){
+            cadeiraHusky.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function(){
+            cadeiraHusky.src = smallimg[2].src;
+        }
+
+    </script>
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>

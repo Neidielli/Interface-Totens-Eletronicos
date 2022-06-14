@@ -13,7 +13,7 @@
     <!-- ESTILO CUSTOMIZADO -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <!-- ESTILO CUSTOMIZADO  HOME -->
-    <link rel="stylesheet" type="text/css" href="css/estilo_home.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo_computadores.css">
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>
@@ -46,7 +46,45 @@
 
  
     <main> <!-- INICIO DA MAIN-->
-    
+        <section id="prodetalhes" class="section-p1"> 
+
+            <div class="prodetalhes-item"> <!-- PRODUTO -->
+                <img src="imagens/Computadores/NTG1.png" width="100%" id="cadeiraHusky"  alt=""> <!-- GRANDE -->
+
+                <div class="img-pequenas-grupo">
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Computadores/NTG1.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Computadores/NTG2.png" width="100%" class="small-img" alt="">
+                    </div>
+                    <div class="img-pequenas-col"> <!-- PEQUENAS -->
+                        <img src="imagens/Computadores/NTG3.png" width="100%" class="small-img" alt="">
+                    </div>
+                </div>
+
+            </div> <!-- FIM PRODUTO -->
+
+            <div class="descriçao">
+                <h6>Home / Computadores</h6>
+                <h4>Notebook Gamer Lenovo 3i Intel Core i7</h4>
+                <h2>R$ 4.999,90</h2>
+
+                <input type="number" value="1">
+                <button class="btn btn-primary">Adicionar ao carrinho</button>
+
+                <h3>Descrição</h3>
+                <span>
+                    <p>Novo design com 10ª Geração de Processadores Intel Core i7-10750H e placa de vídeo NVIDIA GeForce GTX 1650 4GB. Ideal para gamers e usuários que também precisam de alta performance.</p>
+                  <p>Com tela de 15.6'' Full HD WVA Antirreflexo para melhor definição de imagem e cores. O armanezamento SSD PCIe NVMe é 10x mais rápido* que um HDD 2.5” SATA, você terá mais segurança ao armazenar seus dados. 
+                </p>
+                  <p>O teclado retroiluminado em LED azul, deixa o computador mais atraente e também favorece a performance para jogos em lugares com pouca iluminação.
+                </p>
+                  <p>Silencioso e não esquenta: projetado com um sistema de resfriamento otimizado composto por 2 coolers e 4 saídas de ar para suportar o alto desempenho do notebook.</p>
+                  <p>Sua privacidade pessoal é muito importante. É por isso que o Ideapad Gaming 3i está equipado com prática porta de privacidade da webcam. Quando não estiver em uma chamada de vídeo ou gravando algo, basta deslizá-la. </p>
+                </span>
+            </div>
+        </section>
 
     </main> <!-- FIM MAIN -->
 
@@ -94,6 +132,22 @@
             </div>
         </div>
     </footer> <!-- FIM FOOTER-->
+
+    <script>
+        var cadeiraHusky = document.getElementById("cadeiraHusky");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function(){
+            cadeiraHusky.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function(){
+            cadeiraHusky.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function(){
+            cadeiraHusky.src = smallimg[2].src;
+        }
+
+    </script>
 
     <!-- ESTILO JAVASCRIPT -->
     <script src="js/home.js"></script>
