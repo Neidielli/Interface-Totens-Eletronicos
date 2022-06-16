@@ -11,6 +11,8 @@
 
     <!-- ESTILO CUSTOMIZADO -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <!-- ESTILO CUSTOMIZADO CARRINHO -->
+    <link rel="stylesheet" type="text/css" href="css/estilo_carrinho.css">
 
 </head>
 
@@ -39,6 +41,62 @@
 
     <main> <!-- INICIO DA MAIN-->
 
+        <section id="cart" class="section-p1">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Remover</td>
+                        <td>Produto</td>
+                        <td>Descrição</td>
+                        <td>Preço</td>
+                        <td>Quantidade</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><a href=""><img src="imagens/icone-fechar.png" height="20" width="25"></a></td>
+                        <td><img src="imagens/Cadeiras/Cadeira Gamer Husky Gaming Snow.png"></td>
+                        <td>Cadeira Gamer Husky Gaming snow</td>
+                        <td>RS 629,00</td>
+                        <td><input type="number" value="1"></td>
+                        <td>RS 629,00</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href=""><img src="imagens/icone-fechar.png" height="20" width="25"></a></td>
+                        <td><img src="imagens/Cadeiras/Cadeira Gamer Husky Gaming Snow.png"></td>
+                        <td>Cadeira Gamer Husky Gaming snow</td>
+                        <td>RS 629,00</td>
+                        <td><input type="number" value="1"></td>
+                        <td>RS 629,00</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href=""><img src="imagens/icone-fechar.png" height="20" width="25"></a></td>
+                        <td><img src="imagens/Cadeiras/Cadeira Gamer Husky Gaming Snow.png"></td>
+                        <td>Cadeira Gamer Husky Gaming snow</td>
+                        <td>RS 629,00</td>
+                        <td><input type="number" value="1"></td>
+                        <td>RS 629,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="card-add" class="section-p1">
+            <div id="subtotal">
+                <h3>Total</h3>
+                <table>
+                    <tr>
+                        <td><strong>Total da compra</strong></td>
+                        <td><strong>RS 1.800,00</strong></td>
+                    </tr>
+                </table>
+                <button class="btn btn-primary">Ir para pagamento</button>
+            </div>
+        </section>
     </main> <!-- FIM MAIN -->
 
     <footer> <!-- INICIO DA FOOTER-->
@@ -85,6 +143,9 @@
             </div>
         </div>
     </footer> <!-- FIM FOOTER-->
+
+    <!-- JS -->
+    <script src="carrinho.js"></script>
 </body> <!--FIM BODY -->
 
 </html>
