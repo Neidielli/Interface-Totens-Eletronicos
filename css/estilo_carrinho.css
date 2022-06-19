@@ -64,6 +64,7 @@
 }
 #subtotal table td{
     width: 50%;
+    border: 1px solid #1C2143;
     border: 1px solid #5dcad1;
     padding: 10px;
     font-size: 13px;
