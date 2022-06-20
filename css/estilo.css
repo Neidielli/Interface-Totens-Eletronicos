@@ -17,7 +17,6 @@ footer {
 	border-radius: 10px;
 }*/
 
-
 /****** FORMATAÇÃO DAS CLASS *****/
 .area-cabeçalho {
     height: 100px;
@@ -93,4 +92,8 @@ footer {
    list-style-type: none;
    padding: 2px;
    margin: 2px;
+}
+
+#menu li {
+    display:none;
 }
