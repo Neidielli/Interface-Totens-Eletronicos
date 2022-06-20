@@ -73,13 +73,24 @@ footer {
     padding: 2px 4px;
 }
 /** FORMATAÇÃO DA BARRAA DE PESQUISA **/
-.menuContainer {
-     
+.menuConteiner{
+    width: 100%;
+    padding: 15px 0px;
 }
-.menuContainer li a{
-    padding: 12px;
+#menu li a{
+    padding: 10px 0px;
     text-decoration: none;
-    color: #5dcad1;
+    background: #DBDBDB;
+    color: black;
     display: block;
-
+}
+#menu li a:hover{
+    background-color: #1C2143;
+    color: #5dcad1;
+}
+#menu {
+   width: 100%;
+   list-style-type: none;
+   padding: 2px;
+   margin: 2px;
 }
