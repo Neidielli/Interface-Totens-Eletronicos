@@ -117,7 +117,11 @@
             var janela = window.open("","","width=500px,heigth=300px");
             janela.document.write("<html><head>");
             janela.document.write("<title>Ticket</title></head>");
-            janela.document.write("<body><h2>CPF: ${cpf}</h2><table><thead><tr><td>Produto</td><td>Descrição</td><td>Preço</td><td>Quantidade</td><td>Total</td></tr></thead>");
+
+            /** MEXER AQUI */
+            janela.document.write("<body><h2>CPF: </h2><table><thead><tr><td>Produto</td><td>Descrição</td><td>Preço</td><td>Quantidade</td><td>Total</td></tr></thead>");
+            /* MEXER NESSE */    
+
             janela.document.write("<tbody class='conteudoDoTBody'>")
 
             
@@ -127,10 +131,10 @@
             var ticketItens = janela.document.getElementsByClassName("conteudoDoTBody")[0]
 
             var ticketContent = `
-                                        <td class="cart-product-title">Cadeira Gamer Husky Gaming snow</td>
+                                        <td class="cart-product-title">${nome}</td>
                                         <td class="">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
-                                        <td class="precoProduto">R$629.04</td>
-                                        <td class="cartaoQuantidade">1</td>
+                                        <td class="precoProduto">${valor}</td>
+                                        <td class="cartaoQuantidade">${quantidade}</td>
                                         <td class="">R$0</td>`;
                         
             caixaticket.innerHTML = ticketContent;
@@ -138,8 +142,9 @@
 
             janela.document.write("</tbody");
             janela.document.write("</body></html>");
-            janela.document.close();
             janela.print();
+            janela.document.close();
+            
 
         }
 

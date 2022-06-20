@@ -12,27 +12,33 @@ function ready(){
 function removerItem(event) {
     var tr = event.target.parentElement.parentElement.parentElement;
     var nome = tr.getElementsByClassName("cart-product-title")[0].innerHTML
-    console.log(nome)
+    var tamanho = localStorage.length + 1;
     var i = 0;
-    
+    var c1 = 0;
+
     while(true){
-        if(localStorage.getItem(localStorage.key[i]) == nome){
-            var id = localStorage.key[i][0];
+        if(localStorage.getItem(localStorage.key(i)) == nome){
+            var id = localStorage.key(i)[0];
+            console.log("É isso " + id)
             break;
         }
         i++;
-        if(i == 10){
-            console.log("Deu Ruim!")
-            break;
-        }
-    }
-    
-    for(i = 0; i < localStorage.length; i++){
-        if(localStorage.key[i][0] == id){
-            localStorage.removeItem(localStorage.localStorage.key[i][0])
-        }
     }
 
+    i = 0;
+    while(true){
+        if(c1 == 4){
+            break;
+        }
+        else if(localStorage.key(i)[0] == id){
+            localStorage.removeItem(localStorage.key(i));
+            i = 0;
+            c1++;    
+        }
+        else{
+            i++;       
+        }
+    }
     tr.remove();
     updateTotal();
 }
