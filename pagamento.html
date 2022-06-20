@@ -130,6 +130,8 @@
 
         function gerarPDF(){
             var cpf = document.getElementById("cpfUsuario").value;
+            monName = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "agosto", "outubro", "novembro", "dezembro")
+            now = new Date
 
             var janela = window.open("","","width=500px,heigth=300px");
 
@@ -160,7 +162,12 @@
             
             janela.document.write("</tbody");
             janela.document.write("<h2>Status do Ticket: IMPRESSO</h2>");
+            janela.document.write("<h4>Data do Ticket: " + now.getDate() + " de " + monName [now.getMonth() ] + " de " + now.getFullYear() + "</h4>");
+            janela.document.write("<h4>Hora do Ticket: " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds() + "</h4>");
+
             janela.document.write("<h2>Valor Total: R$"+total +"</h2>");
+            janela.document.write("<h4>ID do carrinho: " + Math.round(Math.random() * 100)  + "</h4>")
+            janela.document.write("<h4>ID do cliente: " + Math.round(Math.random() * 100) + "</h4>")
             janela.document.write("</body></html>");
             janela.document.close();
             janela.print();
