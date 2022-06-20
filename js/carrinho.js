@@ -73,7 +73,7 @@ function addProdutoAoCarrinho(nome, valor, quantidade, departamento){
     var cartItems = document.getElementsByClassName("conteudoCarrinho")[0]
     var cartBoxContent = `
                         <td><i class="excluir"><img src="imagens/icone-fechar.png" height="20" width="25"></i></td>
-                        <td><img src="imagens/${departamento}s/${nome}.png"></td>
+                        <td><img src="imagens/${departamento}/${nome}.png"></td>
                         <td class="cart-product-title">${nome}</td>
                         <td class="precoProduto">${valor}</td>
                         <td><input class="cartaoQuantidade" type="number" value="${quantidade}"></td>`;
