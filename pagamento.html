@@ -117,24 +117,36 @@
             var janela = window.open("","","width=500px,heigth=300px");
             janela.document.write("<html><head>");
             janela.document.write("<title>Ticket</title></head>");
-            janela.document.write("<body><h2>CPF: ${cpf}</h2><table><thead><tr><td>Produto</td><td>Descrição</td><td>Preço</td><td>Quantidade</td><td>Total</td></tr></thead>");
+            janela.document.write("<body><h2>CPF:"+cpf+" </h2><table><thead><tr><td>Produto</td><td>Preço</td><td>Quantidade</td><td>Total</td></tr></thead>");
             janela.document.write("<tbody class='conteudoDoTBody'>")
-
-            var caixaticket = janela.document.createElement("tr");
-            caixaticket.classList.add("conteudoNoTicket");
-            var ticketItens = janela.document.getElementsByClassName("conteudoDoTBody")[0]
-
-            var ticketContent = `
-                                        <td class="cart-product-title">Cadeira Gamer Husky Gaming snow</td>
-                                        <td class="">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
-                                        <td class="precoProduto">R$629.04</td>
-                                        <td class="cartaoQuantidade">1</td>
-                                        <td class="">R$0</td>`;
-                        
-            caixaticket.innerHTML = ticketContent;
-            ticketItens.append(caixaticket);
-
+            
+            var memoria = new Array();
+            for(var i = 0; i < localStorage.length; i++){
+                memoria.push(localStorage.key(i));
+            }
+            memoria = memoria.sort();
+            for(var i = 0; i < memoria.length; i = i + 4){
+                var nome = localStorage.getItem(memoria[i+1]); 
+                var valor = localStorage.getItem(memoria[i+3]); 
+                var quantidade = localStorage.getItem(memoria[i+2]);
+                var departamento = localStorage.getItem(memoria[i]);
+                var total = parseFloat(quantidade)*parseFloat(valor)
+                var caixaticket = janela.document.createElement("tr");
+                caixaticket.classList.add("ticketItens");
+                var ticketItens = janela.document.getElementsByClassName("conteudoDoTBody")[0]
+                var ticketContent = `
+                                    <td class="cart-product-title">${nome}</td>
+                                    <td class="precoProduto">${valor}</td>
+                                    <td class="cartaoQuantidade">${quantidade}</td>
+                                    <td class="cartaoQuantidade">${total}</td> 
+                                    `;        
+                caixaticket.innerHTML = ticketContent;
+                ticketItens.append(caixaticket);
+            }
+        
+            
             janela.document.write("</tbody");
+            janela.document.write("<h2>Status do Ticket: IMPRESSO</h2>");
             janela.document.write("</body></html>");
             janela.document.close();
             janela.print();

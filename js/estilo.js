@@ -65,13 +65,3 @@ pesquisaTotal.onmouseleave = () => { // quando clica em outro elemento ele retir
         
     }
 }
-// FAZENDO A FUNÇÃO DE PESQUISAR
-function pesquisar(){
-
-}
-
-// DEIXANDO A BARRA DE PESQUISA DINÂMICA
-/*let pesquisaIcon = document.querySelector(".pesquisaIcone");
-let pesquisaConteudo = document.querySelector("#menu");
-let fecharPesquisa = document.querySelector(""); /* FECHAR QUANDO O USUÁRIO CLICAR EM OUTRA COISA*/
-

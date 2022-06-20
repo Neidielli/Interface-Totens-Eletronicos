@@ -19,7 +19,6 @@ function removerItem(event) {
     while(true){
         if(localStorage.getItem(localStorage.key(i)) == nome){
             var id = localStorage.key(i)[0];
-            console.log("É isso " + id)
             break;
         }
         i++;
@@ -58,7 +57,6 @@ function atualizaLista(){
     for(var i = 0; i < localStorage.length; i++){
         memoria.push(localStorage.key(i));
     }
-    
     memoria = memoria.sort();
     for(var i = 0; i < memoria.length; i = i + 4){
         addProdutoAoCarrinho(
