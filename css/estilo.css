@@ -72,3 +72,14 @@ footer {
     line-height: 1;
     padding: 2px 4px;
 }
+/** FORMATAÇÃO DA BARRAA DE PESQUISA **/
+.menuContainer {
+     
+}
+.menuContainer li a{
+    padding: 12px;
+    text-decoration: none;
+    color: #5dcad1;
+    display: block;
+
+}
