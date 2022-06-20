@@ -11,6 +11,8 @@
 
     <!-- ESTILO CUSTOMIZADO -->
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <!-- ESTILO CUSTOMIZADO PAGAMENTO -->
+    <link rel="stylesheet" type="text/css" href="css/estilo_pagamento.css">
 
 </head>
 
@@ -21,16 +23,14 @@
             <div class="logo item-cabeçalho">
                 <a href="home.html"><img src="imagens/logo.png" height="70" width="90"></a>
             </div>
-            <div class="input-group item-cabeçalho">
-                <input class="form-control" type="text" placeholder="Encontre seu produto">
-                <div class="input-group-append">
-                    <button type="button" class="btn btn-primary">Pesquisar</button>
-                </div>
+            <div class="item-cabeçalho">
+                <h1>OBRIGADO PELA PREFERÊNCIA</h1>
             </div>
-            <div class="suporte item-cabeçalho">
+
+            <div class="item-cabeçalho menu-icones">
                 <a href="suporte.html"><img src="imagens/suporte-icon.png" height="30" width="40"></a>
             </div>
-            <div class="carrinho item-cabeçalho">
+            <div class="item-cabeçalho menu-icones">
                 <a href="carrinho.html"><img src="imagens/carrinho-icon.png" height="30" width="40"></a>
             </div>
         </div> <!-- FIM CABEÇALHO -->
@@ -38,6 +38,39 @@
     </header> <!-- FIM HEADER -->
     
     <main> <!-- INICIO DA MAIN-->
+
+        <section id="card-add" class="section-p1">
+            <div id="subtotal">
+                <h3 class="text-center">PAGAMENTO</h3>
+
+                <form class="form-inline inserirCPF">
+                    <div class="form-group">
+
+                      <label><strong>Digite o seu CPF <small class="text-muted">(Opcional)</small></strong></label>
+                      <input type="text" id="cpfUsuario" class="form-control inserirCPFItem" placeholder="ex.: 000.000.000-00">
+
+                    </div>
+                  </form>
+
+                <table>
+                    <tr>
+                        <td class="total-titulo"><strong>Total da compra</strong></td>
+                        <td class="total-preco"><strong>RS0</strong></td>
+                    </tr>
+                </table>
+
+                <div id="botao-flex">
+                    <button class="btn btn-primary botaoItens" onclick="gerarPDF()">Pagar com Cartão</button>
+                    <button class="btn btn-primary botaoItens" onclick="gerarPDF()">Pagar com Pix</button>
+                </div>
+
+            </div>
+
+            <div  class="conteudoNoTicket">
+            
+            </div>
+
+        </section>
 
     </main> <!-- FIM MAIN -->
 
@@ -76,5 +109,40 @@
             </div>
         </div>
     </footer> <!-- FIM FOOTER-->
+
+    <script>
+        function gerarPDF(){
+            var cpf = document.getElementById("cpfUsuario").value;
+
+            var janela = window.open("","","width=500px,heigth=300px");
+            janela.document.write("<html><head>");
+            janela.document.write("<title>Ticket</title></head>");
+            janela.document.write("<body><h2>CPF: ${cpf}</h2><table><thead><tr><td>Produto</td><td>Descrição</td><td>Preço</td><td>Quantidade</td><td>Total</td></tr></thead>");
+            janela.document.write("<tbody class='conteudoDoTBody'>")
+
+            
+            
+            var caixaticket = janela.document.createElement("tr");
+            caixaticket.classList.add("conteudoNoTicket");
+            var ticketItens = janela.document.getElementsByClassName("conteudoDoTBody")[0]
+
+            var ticketContent = `
+                                        <td class="cart-product-title">Cadeira Gamer Husky Gaming snow</td>
+                                        <td class="">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
+                                        <td class="precoProduto">R$629.04</td>
+                                        <td class="cartaoQuantidade">1</td>
+                                        <td class="">R$0</td>`;
+                        
+            caixaticket.innerHTML = ticketContent;
+            ticketItens.append(caixaticket);
+
+            janela.document.write("</tbody");
+            janela.document.write("</body></html>");
+            janela.document.close();
+            janela.print();
+
+        }
+
+    </script>
 </body> <!--FIM BODY -->
 </html>

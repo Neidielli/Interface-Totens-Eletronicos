@@ -52,10 +52,10 @@
 #subtotal {
     width: 50%;
     margin-bottom: 30px;
-    border: 1px solid #5dcad1;
+    border: 1px solid #1C2143;
     padding: 30px;
     border-radius: 20px;
-    background-color: white;
+    background-color: #5dcad1;
 }
 #subtotal table {
     border-collapse: collapse;
@@ -65,7 +65,13 @@
 #subtotal table td{
     width: 50%;
     border: 1px solid #1C2143;
-    border: 1px solid #5dcad1;
     padding: 10px;
     font-size: 13px;
+}
+#botao-flex{
+    display: flex;
+    justify-content: space-around;
+}
+.botaoItens {
+
 }
