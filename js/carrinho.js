@@ -8,6 +8,8 @@ if (document.readyState == "loading") {
 
 // função ready
 function ready(){
+    atualizaLista();
+    
     // Remove os itens do carrinho
     var removerCarrinho = document.getElementsByClassName('excluir')
     console.log(removerCarrinho)
@@ -20,12 +22,6 @@ function ready(){
     for (var i = 0; i < quantidadeInputs.length; i++){
         var  input = quantidadeInputs[i];
         input.addEventListener("change", quantidadeMudado);
-    }
-    // Adicionar ao carrinho
-    var addCarrinho = document.getElementsByClassName('add-carrinho')
-    for (var i = 0; i < addCarrinho.length; i++){
-        var button = addCarrinho[i]
-        button.addEventListener('click', addCarrinhoClicado);
     }
 }
 
@@ -44,16 +40,20 @@ function quantidadeMudado(event){
     updateTotal();
 }
 // Adiciona ao carrinho 
-function addCarrinhoClicado(event){
-    var button = event.target;
-    var shopProdutos = button.parentElement.parentElement
-    var title = shopProdutos.getElementsByClassName("produto-titulo")[0].innerText; // Dentro de cada produto
-    var price = shopProdutos.getElementsByClassName("produto-preco")[0].innerText; // Dentro de cada produto
-    var img = shopProdutos.getElementsByClassName("produto-img")[0].src;
-    addProdutoAoCarrinho(title, price, img);
+function atualizaLista(){
+    var memoria = new Array();
+    for(var i = 0; i < localStorage.length; i++){
+        memoria.push(localStorage.key(i));
+    }
+    memoria = memoria.sort();
+    for(var i = 0; i < memoria.length; i = i + 3){
+        addProdutoAoCarrinho(localStorage.getItem(memoria[i]), 
+            localStorage.getItem(memoria[i+2]), localStorage.getItem(memoria[i+1]))
+    }
     updateTotal();
 }
-function addProdutoAoCarrinho(title, price, img){
+
+function addProdutoAoCarrinho(nome, valor, quantidade){
     var caixaCarrinho = document.createElement("tr"); // Dentro do carrinho mesmo
     caixaCarrinho.classList.add("carrinhoItens");
     var cartItems = document.getElementsByClassName("conteudoCarrinho")[0]
@@ -67,13 +67,11 @@ function addProdutoAoCarrinho(title, price, img){
     var cartBoxContent = `
                         <td><i class="excluir"><img src="imagens/icone-fechar.png" height="20" width="25"></i></td>
                         <td><img src="imagens/Cadeiras/Cadeira Gamer Husky Gaming Snow.png"></td>
-                        <td class="cart-product-title">Cadeira Gamer Husky Gaming snow</td>
-                        <td class="precoProduto">R$629.04</td>
-                        <td><input class="cartaoQuantidade" type="number" value="1"></td>`;
+                        <td class="cart-product-title">${nome}</td>
+                        <td class="precoProduto">${valor}</td>
+                        <td><input class="cartaoQuantidade" type="number" value="${quantidade}"></td>`;
                         
     caixaCarrinho.innerHTML = cartBoxContent;
-    console.log(cartItems);
-    console.log(caixaCarrinho);
     cartItems.append(caixaCarrinho);
     caixaCarrinho
         .getElementsByClassName('excluir')[0]
