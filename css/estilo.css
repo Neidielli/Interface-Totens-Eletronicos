@@ -17,7 +17,6 @@ footer {
 	border-radius: 10px;
 }*/
 
-
 /****** FORMATAÇÃO DAS CLASS *****/
 .area-cabeçalho {
     height: 100px;
@@ -71,4 +70,30 @@ footer {
     font-weight: var(--weight-500);
     line-height: 1;
     padding: 2px 4px;
+}
+/** FORMATAÇÃO DA BARRAA DE PESQUISA **/
+.menuConteiner{
+    width: 100%;
+    padding: 15px 0px;
+}
+#menu li a{
+    padding: 10px 0px;
+    text-decoration: none;
+    background: #DBDBDB;
+    color: black;
+    display: block;
+}
+#menu li a:hover{
+    background-color: #1C2143;
+    color: #5dcad1;
+}
+#menu {
+   width: 100%;
+   list-style-type: none;
+   padding: 2px;
+   margin: 2px;
+}
+
+#menu li {
+    display:none;
 }
