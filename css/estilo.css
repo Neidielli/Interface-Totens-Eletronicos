@@ -23,7 +23,7 @@ footer {
     height: 100px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     /*justify-content: space-around;*/
     align-items: center;
 }
@@ -60,4 +60,15 @@ footer {
 #cartoes  a:link, a:visited, a:active, a:hover {
     text-decoration: none;
     color: black;
+}
+
+/** FORMATAÇÃO DO CONTADOR DO CARRINHO **/
+.badge-info {
+    position: absolute;
+    top: 25px;
+    right: 90px;
+    font-size: 14px;
+    font-weight: var(--weight-500);
+    line-height: 1;
+    padding: 2px 4px;
 }

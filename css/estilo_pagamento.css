@@ -1,0 +1,40 @@
+.section-p1 { /* AQUI */
+	padding: 40px 40px;
+}
+#card-add{ /* AQUI */
+    display: flex;
+    justify-content: center;
+}
+#subtotal { /* AQUI */
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #1C2143;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #5dcad1;
+}
+#subtotal table { /* AQUI */
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#subtotal table td{ /* AQUI */
+    width: 50%;
+    border: 1px solid #1C2143;
+    padding: 10px;
+    font-size: 13px;
+}
+#botao-flex{
+    display: flex;
+    justify-content: space-around;
+}
+.botaoItens {
+
+}
+.inserirCPF{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.inserirCPFItem {
+    margin-left: 265px;
+}
