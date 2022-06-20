@@ -1,4 +1,5 @@
 let barraPesquisa = document.querySelector(".form-control");
+let pesquisaTotal = document.querySelector(".menuConteiner");
 
 barraPesquisa.onkeyup = () => {
     var filtro,menu,menuItens,links;
@@ -8,13 +9,14 @@ barraPesquisa.onkeyup = () => {
     menuItens = menu.getElementsByTagName("li");
     for(var i = 0; i < menuItens.length; i++){
         links = menuItens[i].getElementsByTagName("a")[0];
-        console.log(links.innerHTML.toUpperCase().indexOf(filtro))
+
         if(links.innerHTML.toUpperCase().indexOf(filtro)> -1){
             menuItens[i].style.display="block";
         }else if(filtro == "" || links.innerHTML.toUpperCase().indexOf(filtro) == -1){
             menuItens[i].style.display="none";
         }
     }
+
 }
 
 barraPesquisa.focusin = () => {
@@ -25,7 +27,7 @@ barraPesquisa.focusin = () => {
     menuItens = menu.getElementsByTagName("li");
     for(var i = 0; i < menuItens.length; i++){
         links = menuItens[i].getElementsByTagName("a")[0];
-        console.log(links.innerHTML.toUpperCase().indexOf(filtro))
+  
         if(links.innerHTML.toUpperCase().indexOf(filtro)> -1){
             menuItens[i].style.display="block";
         }else if(filtro == "" || links.innerHTML.toUpperCase().indexOf(filtro) == -1){
@@ -33,8 +35,8 @@ barraPesquisa.focusin = () => {
         }
     }
 }
-
-barraPesquisa.focusout = () => {
+/*
+barraPesquisa.parentElement.parentElement.focusout = () => {
     var filtro,menu,menuItens,links;
     
     filtro = barraPesquisa.value.toUpperCase();
@@ -42,7 +44,7 @@ barraPesquisa.focusout = () => {
     menuItens = menu.getElementsByTagName("li");
     for(var i = 0; i < menuItens.length; i++){
         links = menuItens[i].getElementsByTagName("a")[0];
-        console.log(links.innerHTML.toUpperCase().indexOf(filtro))
+
         if(links.innerHTML.toUpperCase().indexOf(filtro)> -1){
             menuItens[i].style.display="block";
         }else if(filtro == "" || links.innerHTML.toUpperCase().indexOf(filtro) == -1){
@@ -50,8 +52,8 @@ barraPesquisa.focusout = () => {
         }
     }
 }
-
-barraPesquisa.focusout = () => {
+*/
+pesquisaTotal.onmouseleave = () => { // quando clica em outro elemento ele retira o focus da pesquisa
     var filtro,menu,menuItens,links;
     
     filtro = barraPesquisa.value.toUpperCase();
