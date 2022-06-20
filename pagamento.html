@@ -115,11 +115,12 @@
             var cpf = document.getElementById("cpfUsuario").value;
 
             var janela = window.open("","","width=500px,heigth=300px");
-            janela.document.write("<html><head>");
+            janela.document.write("<html><head href='css/estilo_pagamento.css'>");
             janela.document.write("<title>Ticket</title></head>");
 
             /** MEXER AQUI */
-            janela.document.write("<body><h2>CPF: </h2><table><thead><tr><td>Produto</td><td>Descrição</td><td>Preço</td><td>Quantidade</td><td>Total</td></tr></thead>");
+
+            janela.document.write("<body><h2>CPF: </h2><table class='ticket'><thead><tr><td>Produto:</td><td>Descrição:</td><td>Preço:</td><td>Quantidade:</td><td>Total:</td></tr></thead>");
             /* MEXER NESSE */    
 
             janela.document.write("<tbody class='conteudoDoTBody'>")

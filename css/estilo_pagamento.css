@@ -28,13 +28,14 @@
     display: flex;
     justify-content: space-around;
 }
-.botaoItens {
-
-}
 .inserirCPF{
     margin-top: 15px;
     margin-bottom: 15px;
 }
 .inserirCPFItem {
     margin-left: 265px;
+}
+
+.ticket { 
+    background:red;
 }
